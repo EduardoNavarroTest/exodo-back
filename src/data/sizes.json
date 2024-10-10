@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "code": "XS",
+    "name": "Talla XS",
+    "description": "Extra small",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 2,
+    "code": "S",
+    "name": "Talla S",
+    "description": "Small",
+    "status": false,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 3,
+    "code": "M",
+    "name": "Talla M",
+    "description": "Medium",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 4,
+    "code": "EX",
+    "name": "Extra Grande",
+    "description": "La Maravilla del Pueblo",
+    "status": false,
+    "user": "",
+    "date": "2024-10-09T18:33:56.950Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-10-09T18:33:56.950Z"
+  },
+  {
+    "id": 5,
+    "code": "AL",
+    "name": "ALISS",
+    "description": "La Princesa se llama ALISS",
+    "status": true,
+    "user": "",
+    "date": "2024-10-10T13:24:11.179Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-10-10T13:56:31.073Z"
+  }
+]
