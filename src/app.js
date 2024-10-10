@@ -21,6 +21,3 @@ app.use("/api/sizes", SizesRoutes);
 app.listen(PORT, () => {
     console.log(`Server running on port http://localhost:${PORT}`);
 });
-
-
-/// EL DELTE EN EL POSTMAN RETORNA ES EL SIGUIENTE Y NO EL ARCHIVO ACTUAL ELIMINADO
