@@ -36,7 +36,7 @@ class SizeService {
     async deleteSizeByCode(code) {
         const existingSize = await this.sizeRepository.findByCode(code);
         if (!existingSize) { 
-            throw new Error('Size already exists');
+            throw new Error('Size not found');
         }
         const deletedSize = await this.sizeRepository.deleteSizeByCode(code);
         return SizeDTO.fromModel(deletedSize);

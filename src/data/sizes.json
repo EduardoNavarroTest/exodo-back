@@ -11,17 +11,6 @@
     "dateUpdate": "2022-02-02"
   },
   {
-    "id": 2,
-    "code": "S",
-    "name": "Talla S",
-    "description": "Small",
-    "status": false,
-    "user": "admin",
-    "date": "2022-02-02",
-    "userUpdate": "admin",
-    "dateUpdate": "2022-02-02"
-  },
-  {
     "id": 3,
     "code": "M",
     "name": "Talla M",
@@ -58,11 +47,132 @@
     "id": 6,
     "code": "TA",
     "name": "TAMA",
-    "description": "La más grande y mejor talla del mundo mundial",
+    "description": "La mejor talla del WORLD",
     "status": false,
     "user": "",
     "date": "2024-10-11T20:11:12.974Z",
     "userUpdate": "",
-    "dateUpdate": "2024-10-11T20:11:12.974Z"
+    "dateUpdate": "2024-11-01T14:31:20.058Z"
+  },
+  {
+    "id": 8,
+    "code": "AM",
+    "name": "am",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T14:43:36.478Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T14:43:36.478Z"
+  },
+  {
+    "id": 9,
+    "code": "A",
+    "name": "SD",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T14:46:25.484Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T21:06:10.438Z"
+  },
+  {
+    "id": 10,
+    "code": "AS",
+    "name": "asf",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T14:59:15.510Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T14:59:28.917Z"
+  },
+  {
+    "id": 11,
+    "code": "EW",
+    "name": "sadfsdf",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T14:59:37.970Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T14:59:37.970Z"
+  },
+  {
+    "id": 12,
+    "code": "SD",
+    "name": "sdfsadf",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T14:59:45.023Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T14:59:45.023Z"
+  },
+  {
+    "id": 13,
+    "code": "ÂS",
+    "name": "asdf",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T15:08:46.051Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T15:08:46.051Z"
+  },
+  {
+    "id": 14,
+    "code": "",
+    "name": "",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T15:09:07.746Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T15:09:07.746Z"
+  },
+  {
+    "id": 15,
+    "code": "FF",
+    "name": "asdf",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T15:17:23.004Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T15:17:23.004Z"
+  },
+  {
+    "id": 16,
+    "code": "EN",
+    "name": "EDUARDO",
+    "description": "",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T21:07:56.155Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T21:07:56.155Z"
+  },
+  {
+    "id": 17,
+    "code": "CO",
+    "name": "Colombia",
+    "description": "123333asdf",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T21:43:27.201Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T21:43:27.201Z"
+  },
+  {
+    "id": 18,
+    "code": "D",
+    "name": "La mejor talla del m",
+    "description": "La mejor talla del mundo",
+    "status": true,
+    "user": "",
+    "date": "2024-11-01T21:47:05.958Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-11-01T21:47:05.958Z"
   }
 ]
