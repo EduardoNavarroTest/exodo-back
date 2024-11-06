@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "code": "S",
+      "name": "Soltero",
+      "description": "Soltero - Persona que no está casada y no tiene pareja registrada.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 2,
+      "code": "C",
+      "name": "Casado",
+      "description": "Casado - Persona que está unida en matrimonio con otra persona.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 3,
+      "code": "D",
+      "name": "Divorciado",
+      "description": "Divorciado - Persona que ha disuelto legalmente su matrimonio.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 4,
+      "code": "V",
+      "name": "Viudo",
+      "description": "Viudo - Persona cuyo cónyuge ha fallecido y no ha vuelto a casarse.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 5,
+      "code": "P",
+      "name": "Pareja de Hecho",
+      "description": "Pareja de Hecho - Persona que vive con otra en una relación de pareja sin estar casados.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 6,
+      "code": "N",
+      "name": "No Especificado",
+      "description": "No Especificado - Persona que elige no declarar su estado civil.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    }
+  ]
+  

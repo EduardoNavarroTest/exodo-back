@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "code": "SM",
+      "name": "Smartphones",
+      "description": "Subcategoría de Electrónica que incluye teléfonos inteligentes.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "code": "TB",
+      "name": "Tabletas",
+      "description": "Subcategoría de Electrónica que incluye tabletas y dispositivos portátiles.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "code": "M",
+      "name": "Muebles",
+      "description": "Subcategoría de Hogar que incluye muebles para salas, comedores y dormitorios.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "code": "D",
+      "name": "Decoración",
+      "description": "Subcategoría de Hogar que incluye elementos decorativos y accesorios.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "code": "CL",
+      "name": "Calzado",
+      "description": "Subcategoría de Ropa que incluye zapatos, botas y sandalias.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 3
+    },
+    {
+      "id": 6,
+      "code": "R",
+      "name": "Ropa Infantil",
+      "description": "Subcategoría de Ropa que incluye prendas para niños.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 3
+    },
+    {
+      "id": 7,
+      "code": "J",
+      "name": "Juguetes Educativos",
+      "description": "Subcategoría de Juguetes que incluye juguetes que fomentan el aprendizaje.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 4
+    },
+    {
+      "id": 8,
+      "code": "A",
+      "name": "Accesorios de Belleza",
+      "description": "Subcategoría de Belleza que incluye herramientas y accesorios para el cuidado personal.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 5
+    },
+    {
+      "id": 9,
+      "code": "C",
+      "name": "Cosméticos",
+      "description": "Subcategoría de Belleza que incluye productos de maquillaje y cuidado de la piel.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02",
+      "categoryId": 5
+    }
+  ]
+  

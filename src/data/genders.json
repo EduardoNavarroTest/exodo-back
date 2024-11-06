@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "code": "M",
+      "name": "Masculino",
+      "description": "Masculino - Para personas que se identifican como hombres.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 2,
+      "code": "F",
+      "name": "Femenino",
+      "description": "Femenino - Para personas que se identifican como mujeres.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 3,
+      "code": "O",
+      "name": "Otros",
+      "description": "Otros - Para personas que se identifican con géneros no binarios o que prefieren no especificar.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 4,
+      "code": "N",
+      "name": "Prefiere no especificar",
+      "description": "Prefiere no especificar - Para personas que eligen no declarar su género.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    }
+  ]
+  

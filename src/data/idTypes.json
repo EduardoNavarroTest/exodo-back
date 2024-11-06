@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "code": "RC",
+        "name": "Registro Civil",
+        "description": "Registro Civil - Documento que certifica el nacimiento, matrimonio u otros eventos civiles.",
+        "status": true,
+        "user": "admin",
+        "date": "2022-02-02",
+        "userUpdate": "admin",
+        "dateUpdate": "2022-02-02"
+    },
+    {
+        "id": 2,
+        "code": "TI",
+        "name": "Tarjeta de Identidad",
+        "description": "Tarjeta de Identidad - Documento de identificación para menores de edad en algunos países.",
+        "status": true,
+        "user": "admin",
+        "date": "2022-02-02",
+        "userUpdate": "admin",
+        "dateUpdate": "2022-02-02"
+    },
+    {
+        "id": 3,
+        "code": "CC",
+        "name": "Cédula de Ciudadanía",
+        "description": "Cédula de Ciudadanía - Documento oficial de identificación para ciudadanos.",
+        "status": true,
+        "user": "admin",
+        "date": "2022-02-02",
+        "userUpdate": "admin",
+        "dateUpdate": "2022-02-02"
+    },
+    {
+        "id": 4,
+        "code": "CE",
+        "name": "Cédula de Extranjería",
+        "description": "Cédula de Extranjería - Documento de identificación para extranjeros en el país.",
+        "status": true,
+        "user": "admin",
+        "date": "2022-02-02",
+        "userUpdate": "admin",
+        "dateUpdate": "2022-02-02"
+    },
+    {
+        "id": 5,
+        "code": "OT",
+        "name": "Otros",
+        "description": "Otros - Documentos de identificación no especificados anteriormente.",
+        "status": true,
+        "user": "admin",
+        "date": "2022-02-02",
+        "userUpdate": "admin",
+        "dateUpdate": "2022-02-02"
+    }
+]

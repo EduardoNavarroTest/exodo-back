@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "code": "E",
+      "name": "Electrónica",
+      "description": "Categoría que incluye dispositivos electrónicos como teléfonos, computadoras y accesorios.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 2,
+      "code": "H",
+      "name": "Hogar",
+      "description": "Categoría que abarca productos para el hogar, incluyendo muebles y decoración.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 3,
+      "code": "R",
+      "name": "Ropa",
+      "description": "Categoría dedicada a prendas de vestir para hombres, mujeres y niños.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 4,
+      "code": "J",
+      "name": "Juguetes",
+      "description": "Categoría que incluye juguetes y juegos para niños de todas las edades.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    },
+    {
+      "id": 5,
+      "code": "B",
+      "name": "Belleza",
+      "description": "Categoría que abarca productos de belleza, cuidado personal y maquillaje.",
+      "status": true,
+      "user": "admin",
+      "date": "2022-02-02",
+      "userUpdate": "admin",
+      "dateUpdate": "2022-02-02"
+    }
+  ]
+  
