@@ -1,91 +1,101 @@
 [
-    {
-      "id": 1,
-      "code": "R",
-      "name": "Rojo",
-      "description": "Rojo - Color intenso, asociado con la pasión y la energía.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 2,
-      "code": "G",
-      "name": "Verde",
-      "description": "Verde - Color que representa la naturaleza, la calma y la frescura.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 3,
-      "code": "B",
-      "name": "Azul",
-      "description": "Azul - Color asociado con la serenidad, la confianza y la estabilidad.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 4,
-      "code": "Y",
-      "name": "Amarillo",
-      "description": "Amarillo - Color brillante que simboliza la alegría y la energía.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 5,
-      "code": "P",
-      "name": "Púrpura",
-      "description": "Púrpura - Color que representa la creatividad y la imaginación.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 6,
-      "code": "N",
-      "name": "Negro",
-      "description": "Negro - Color asociado con la elegancia y el misterio.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 7,
-      "code": "W",
-      "name": "Blanco",
-      "description": "Blanco - Color que simboliza la pureza y la paz.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    },
-    {
-      "id": 8,
-      "code": "O",
-      "name": "Naranja",
-      "description": "Naranja - Color vibrante que representa la energía y la vitalidad.",
-      "status": true,
-      "user": "admin",
-      "date": "2022-02-02",
-      "userUpdate": "admin",
-      "dateUpdate": "2022-02-02"
-    }
-  ]
-  
+  {
+    "id": 0,
+    "code": "NA",
+    "name": "Not Applicable",
+    "description": "Not Applicable",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 1,
+    "code": "R",
+    "name": "Rojo",
+    "description": "Rojo - Color intenso, asociado con la pasión y la energía.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 2,
+    "code": "G",
+    "name": "Verde",
+    "description": "Verde - Color que representa la naturaleza, la calma y la frescura.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 3,
+    "code": "B",
+    "name": "Azul",
+    "description": "Azul - Color asociado con la serenidad, la confianza y la estabilidad.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 4,
+    "code": "Y",
+    "name": "Amarillo",
+    "description": "Amarillo - Color brillante que simboliza la alegría y la energía.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 5,
+    "code": "P",
+    "name": "Púrpura",
+    "description": "Púrpura - Color que representa la creatividad y la imaginación.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 6,
+    "code": "N",
+    "name": "Negro",
+    "description": "Negro - Color asociado con la elegancia y el misterio.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 7,
+    "code": "W",
+    "name": "Blanco",
+    "description": "Blanco - Color que simboliza la pureza y la paz.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 8,
+    "code": "O",
+    "name": "Naranja",
+    "description": "Naranja - Color vibrante que representa la energía y la vitalidad.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  }
+]

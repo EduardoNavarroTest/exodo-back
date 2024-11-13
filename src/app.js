@@ -1,5 +1,6 @@
 import express from "express";
 import SizesRoutes from "./routes/SizesRoutes.js";
+import ProductsRoutes from "./routes/ProductRouter.js"
 import cors from 'cors';
 import 'dotenv/config'
 
@@ -15,6 +16,7 @@ app.use(cors());
 
 //Routes
 app.use("/api/sizes", SizesRoutes);
+app.use("/api/products", ProductsRoutes);
 
 
 

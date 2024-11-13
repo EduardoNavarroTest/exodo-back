@@ -52,7 +52,6 @@ class SizeService {
         }
 
         const existingSize = await this.sizeRepository.findByCode(newCode);
-        console.log(existingSize);
         if (existingSize && code !== newCode) {
             throw new Error('Size already exists');
         }

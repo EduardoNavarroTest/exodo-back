@@ -13,7 +13,7 @@ class SizeDTO {
         this.status = status;
 
 
-        if (!id || !code || !name) {
+        if ((id === undefined || id === null) || !code || !name) { //Se hace así porque el ID puede ser cero
             throw new Error("Invalid data for SizeDTO");
         }
     }

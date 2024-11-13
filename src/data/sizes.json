@@ -1,5 +1,16 @@
 [
   {
+    "id": 0,
+    "code": "NA",
+    "name": "Not Applicable",
+    "description": "Not Applicable - Talla no aplica para el producto.",
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
     "id": 1,
     "code": "XS",
     "name": "Extra Small",
@@ -14,12 +25,12 @@
     "id": 2,
     "code": "S",
     "name": "Small",
-    "description": "Small - Para personas con una complexión pequeña.",
+    "description": "Small - Talla pequeña, ideal para personas de complexión pequeña.",
     "status": true,
     "user": "admin",
     "date": "2022-02-02",
     "userUpdate": "admin",
-    "dateUpdate": "2024-11-06T14:08:02.567Z"
+    "dateUpdate": "2022-02-02"
   },
   {
     "id": 3,
@@ -41,7 +52,7 @@
     "user": "admin",
     "date": "2022-02-02",
     "userUpdate": "admin",
-    "dateUpdate": "2022-02-02"
+    "dateUpdate": "2024-11-07T16:27:33.571Z"
   },
   {
     "id": 5,

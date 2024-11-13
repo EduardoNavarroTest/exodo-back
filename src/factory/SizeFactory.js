@@ -6,7 +6,7 @@ import 'dotenv/config';
 class SizeFactory {
   static getDao() {
     const persistence = process.env.PERSISTENCE; // 'mongo', 'sql' o 'file'
-    console.log(`Persistencia: ${persistence}`);
+    console.log(`Persistencia SIZE: ${persistence}`);
 
     switch (persistence) {
       case 'mongo':
