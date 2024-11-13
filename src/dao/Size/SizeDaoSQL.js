@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-const path = './data/sizes.json';
+const path = '../data/sizes.json';
 
 class SizeDaoSQL {
   async save(user) {

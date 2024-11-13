@@ -1,6 +1,6 @@
-import SizeDaoMongo from "../dao/SizeDaoMongo.js";
-import SizeDaoSQL from "../dao/SizeDaoSQL.js";
-import SizeDaoFile from "../dao/SizeDaoFile.js";
+import SizeDaoMongo from "../dao/Size/SizeDaoMongo.js";
+import SizeDaoSQL from "../dao/Size/SizeDaoSQL.js";
+import SizeDaoFile from "../dao/Size/SizeDaoFile.js";
 import 'dotenv/config';
 
 class SizeFactory {

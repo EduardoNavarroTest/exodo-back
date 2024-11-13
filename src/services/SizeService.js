@@ -12,7 +12,7 @@ class SizeService {
 
         const existingSize = await this.sizeRepository.findByCode(code);
         if (existingSize) {
-            throw new Error('Size already exists');
+            throw new Error('Size already exists with the same code');
         }
 
         const size = await new SizeModel({ code, name, description, status });
@@ -28,39 +28,45 @@ class SizeService {
         return sizes.map(size => SizeDTO.fromModel(size));
     }
 
-    async getSizeByCode(code) {
-        const size = await this.sizeRepository.findByCode(code);
+    async getSizeById(id) {
+        const size = await this.sizeRepository.findById(id);
         if (!size) {
-            throw new Error('Size not found');
+            throw new Error('Size not found with the given id');
         }
         return SizeDTO.fromModel(size);
     }
 
-    async deleteSizeByCode(code) {
-        const existingSize = await this.sizeRepository.findByCode(code);
+    async getSizeByCode(code) {
+        const size = await this.sizeRepository.findByCode(code);
+        if (!size) {
+            throw new Error('Size not found with the given code');
+        }
+        return SizeDTO.fromModel(size);
+    }
+
+    async deleteSizeById(id) {
+        const existingSize = await this.sizeRepository.findById(id);
         if (!existingSize) {
             throw new Error('Size not found');
         }
-        const deletedSize = await this.sizeRepository.deleteSizeByCode(code);
+        const deletedSize = await this.sizeRepository.deleteSizeById(id);
         return SizeDTO.fromModel(deletedSize);
     }
 
-    async updateSizeByCode(code, newCode, newName, newDescription, newStatus) {
-        const size = await this.sizeRepository.findByCode(code);
+    async updateSizeById(id, newCode, newName, newDescription, newStatus) {
+        const size = await this.sizeRepository.findById(id);
         if (!size) {
             throw new Error('Size not found');
         }
 
         const existingSize = await this.sizeRepository.findByCode(newCode);
-        if (existingSize && code !== newCode) {
-            throw new Error('Size already exists');
+        if (existingSize && newCode !== size.code) {
+            throw new Error('Size already exists with the same code');
         }
 
-        const updatedSize = await this.sizeRepository.updateSizeByCode(code, newCode, newName, newDescription, newStatus);
+        const updatedSize = await this.sizeRepository.updateSizeById(id, newCode, newName, newDescription, newStatus);
         return SizeDTO.fromModel(updatedSize);
     }
-
-
 
 }
 

@@ -27,6 +27,18 @@ class SizeDaoFile {
         }
     }
 
+    
+    async findById(id) {
+        try {
+            const sizes = await this.findAll();
+            const size = sizes.find(size => size.id == id);
+            return size;
+        } catch (err) {
+            console.log('Error finding size by id:', err);
+            throw err;
+
+        }
+    }
 
     async findByCode(code) {
         try {
@@ -40,12 +52,12 @@ class SizeDaoFile {
         }
     }
 
-    async deleteByCode(code) {
+    async deleteById(id) {
         try {
             const sizes = await this.findAll();
-            const size = await this.findByCode(code);
+            const size = await this.findById(id);
 
-            const index = sizes.findIndex(size => size.code === code);
+            const index = sizes.findIndex(size => size.id == id);
             if (index !== -1) {
                 sizes.splice(index, 1);
                 await fs.writeFile(path, JSON.stringify(sizes, null, 2));
@@ -58,10 +70,10 @@ class SizeDaoFile {
         }
     }
 
-    async updateByCode(code, newCode, newName, newDescription, newStatus) {
+    async updateById(id, newCode, newName, newDescription, newStatus) {
         try {
             const sizes = await this.findAll();
-            const index = sizes.findIndex(size => size.code === code);
+            const index = sizes.findIndex(size => size.id == id);
             if (index !== -1) {
                 sizes[index] = { id: sizes[index].id, code: newCode, name: newName, description: newDescription, status: newStatus, user: sizes[index].user, date: sizes[index].date, userUpdate: sizes[index].userUpdate, dateUpdate: new Date() };
                 await fs.writeFile(path, JSON.stringify(sizes, null, 2));

@@ -14,16 +14,21 @@ class SizeRepository {
     return await this.dao.findAll();
   }
 
+
+  async findById(id) {
+    return await this.dao.findById(id);
+  }
+
   async findByCode(code) {
     return await this.dao.findByCode(code);
   }
 
-  async deleteSizeByCode(code) {
-    return await this.dao.deleteByCode(code);
+  async deleteSizeById(id) {
+    return await this.dao.deleteById(id);
   }
 
-  async updateSizeByCode(code, newCode, newName, newDescription, newStatus) {
-    return await this.dao.updateByCode(code, newCode, newName, newDescription, newStatus);
+  async updateSizeById(id, newCode, newName, newDescription, newStatus) {
+    return await this.dao.updateById(id, newCode, newName, newDescription, newStatus);
   }
 }
 

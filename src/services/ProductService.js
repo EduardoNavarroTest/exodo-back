@@ -13,7 +13,7 @@ class ProductService {
         /**REEMPLAZAR POR EL BARCODE */
         const existingProduct = await this.productRepository.findByBarcode(barcode);
         if (existingProduct) {
-            throw new Error('Product already exists');
+            throw new Error('Product already exists with the same barcode');
         }
 
         const product = await new ProductModel({ barcode, name, description, categoryId, subcategoryId, sizeId, colorId, price, stock, iva, image, status });

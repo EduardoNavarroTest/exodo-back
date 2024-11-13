@@ -23,6 +23,17 @@ class SizeController {
         }
     }
 
+    async getSizeById(req, res) {
+        const { id } = req.params;
+        try {
+            const size = await sizeService.getSizeById(id);
+            res.status(200).json(size);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ error: error.message });
+        }
+    }
+
     async getSizeByCode(req, res) {
         const { code } = req.params;
         try {
@@ -34,21 +45,21 @@ class SizeController {
         }
     }
 
-    async deleteSizeByCode(req, res) {
-        const { code } = req.params;
+    async deleteSizeById(req, res) {
+        const { id } = req.params;
         try {
-            const deletedSize = await sizeService.deleteSizeByCode(code);
+            const deletedSize = await sizeService.deleteSizeById(id);
             res.status(200).json(deletedSize);
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
     }
 
-    async updateSizeByCode(req, res) {
-        const { code } = req.params;
+    async updateSizeById(req, res) {
+        const { id } = req.params;
         const { codeNew, nameNew, descriptionNew, statusNew } = req.body; 
         try {
-            const updatedSize = await sizeService.updateSizeByCode(code, codeNew, nameNew, descriptionNew, statusNew);
+            const updatedSize = await sizeService.updateSizeById(id, codeNew, nameNew, descriptionNew, statusNew);
             res.status(200).json(updatedSize);
         } catch (error) {
             res.status(500).json({ error: error.message });
