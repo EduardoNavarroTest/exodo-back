@@ -1,6 +1,8 @@
 import express from "express";
 import SizesRoutes from "./routes/SizesRoutes.js";
 import ProductsRoutes from "./routes/ProductRouter.js"
+import CategoriesRoutes from "./routes/CategoryRouter.js"
+import SubcategoriesRoutes from "./routes/SubcategoryRouter.js"
 import cors from 'cors';
 import 'dotenv/config'
 
@@ -17,6 +19,8 @@ app.use(cors());
 //Routes
 app.use("/api/sizes", SizesRoutes);
 app.use("/api/products", ProductsRoutes);
+app.use("/api/categories", CategoriesRoutes);
+app.use("/api/subcategories", SubcategoriesRoutes);
 
 
 
@@ -29,9 +33,9 @@ app.listen(PORT, () => {
  * PRIMER FASE
  * -----------------------------
  * Products => Listo todo, falta solo invocar las validaciones para categoria, subcategoria, talla y color
- * Sizes => Listo todo, tomar como base para el resto de los modelos
- * Categories => Próximo a trabajar
- * Subcategories => Próxima a trabajar
+ * Sizes => LISTO BACKEND, FALTA FRONTEND
+ * Categories => LISTO BACKEND, FALTA FRONTEND
+ * Subcategories => LISTO BACKEND, FALTA FRONTEND
  * Colors => Próximo a trabajar
  *  
  * React FRONT de lo anterior

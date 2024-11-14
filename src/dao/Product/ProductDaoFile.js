@@ -66,7 +66,7 @@ class ProductDaoFile {
             }
 
         } catch (err) {
-            console.log('Error deleting product by code:', err.message);
+            console.log('Error deleting product by id:', err.message);
             throw new Error(err);
         }
     }
@@ -82,7 +82,7 @@ class ProductDaoFile {
             }
             return null;
         } catch (err) {
-            console.log('Error updating product by code:', err.message);
+            console.log('Error updating product by id:', err.message);
             throw new Error(err);
         }
     }
