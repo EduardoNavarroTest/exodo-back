@@ -3,6 +3,10 @@ import SizesRoutes from "./routes/SizesRoutes.js";
 import ProductsRoutes from "./routes/ProductRouter.js"
 import CategoriesRoutes from "./routes/CategoryRouter.js"
 import SubcategoriesRoutes from "./routes/SubcategoryRouter.js"
+import ColorsRoutes from "./routes/ColorRoutes.js"
+import GenderRoutes from "./routes/GenderRoutes.js"
+import IdTypesRoutes from "./routes/IdTypesRoutes.js"
+import MaritalStatusRoutes from "./routes/MaritalStatusRoutes.js"
 import cors from 'cors';
 import 'dotenv/config'
 
@@ -21,6 +25,10 @@ app.use("/api/sizes", SizesRoutes);
 app.use("/api/products", ProductsRoutes);
 app.use("/api/categories", CategoriesRoutes);
 app.use("/api/subcategories", SubcategoriesRoutes);
+app.use("/api/colors", ColorsRoutes);
+app.use("/api/genders", GenderRoutes);
+app.use("/api/id-types", IdTypesRoutes);
+app.use("/api/marital-status", MaritalStatusRoutes);
 
 
 
@@ -32,11 +40,13 @@ app.listen(PORT, () => {
 /**
  * PRIMER FASE
  * -----------------------------
- * Products => Listo todo, falta solo invocar las validaciones para categoria, subcategoria, talla y color
+ * Products => LISTO BACKEND, FALTA FRONTEND
  * Sizes => LISTO BACKEND, FALTA FRONTEND
  * Categories => LISTO BACKEND, FALTA FRONTEND
  * Subcategories => LISTO BACKEND, FALTA FRONTEND
- * Colors => Próximo a trabajar
+ * Colors => LISTO BACKEND, FALTA FRONTEND
+ * TypesId => LISTO BACKEND, FALTA FRONTEND
+ * MaritalStatus => PENDIENTE BACKEND, FALTA FRONTEND.......
  *  
  * React FRONT de lo anterior
  * 
@@ -45,8 +55,6 @@ app.listen(PORT, () => {
  * Employes => Próximo a trabajar
  * Users => Próximo a trabajar
  * Clients => Próximo a trabajar
- * TypesId => Próximo a trabajar
- * MaritalStatus => Próximo a trabajar
  * 
  * 
  * TERCERA FASE

@@ -6,7 +6,7 @@ import 'dotenv/config';
 class ProductFactory {
   static getDao() {
     const persistence = process.env.PERSISTENCE; // 'mongo', 'sql' o 'file'
-    console.log(`Persistencia: ${persistence}`);
+    console.log(`Persistencia PRODUCT: ${persistence}`);
 
     switch (persistence) {
       case 'mongo':

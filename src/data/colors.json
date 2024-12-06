@@ -15,7 +15,7 @@
     "code": "R",
     "name": "Rojo",
     "description": "Rojo - Color intenso, asociado con la pasión y la energía.",
-    "status": true,
+    "status": false,
     "user": "admin",
     "date": "2022-02-02",
     "userUpdate": "admin",
@@ -97,5 +97,16 @@
     "date": "2022-02-02",
     "userUpdate": "admin",
     "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 9,
+    "code": "KI",
+    "name": "Extra TA",
+    "description": "La Mejor Variable del Mundo",
+    "status": true,
+    "user": "",
+    "date": "2024-12-05T22:25:47.546Z",
+    "userUpdate": "",
+    "dateUpdate": "2024-12-05T22:25:47.546Z"
   }
 ]
