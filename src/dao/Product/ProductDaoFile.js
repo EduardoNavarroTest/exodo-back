@@ -71,12 +71,12 @@ class ProductDaoFile {
         }
     }
 
-    async updateById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
+    async updateById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
         try {
             const products = await this.findAll();
             const index = products.findIndex(product => product.id == id);
             if (index !== -1) {
-                products[index] = { id: products[index].id, barcode: newBarcode, name: newName, description: newDescription, categoryId: newCategoryId, subcategoryId: newSubCategoryId, sizeId: newSizeId, colorId: newColorId, price: newPrice, stock: newStock, image: newImage, iva: newIva, status: newStatus, user: products[index].user, date: products[index].date, userUpdate: products[index].userUpdate, dateUpdate: new Date() };
+                products[index] = { id: products[index].id, barcode: newBarcode, name: newName, description: newDescription, categoryId: newCategoryId, subcategoryId: newSubcategoryId, sizeId: newSizeId, colorId: newColorId, price: newPrice, stock: newStock, image: newImage, iva: newIva, status: newStatus, user: products[index].user, date: products[index].date, userUpdate: products[index].userUpdate, dateUpdate: new Date() };
                 await fs.writeFile(path, JSON.stringify(products, null, 2));
                 return products[index];
             }

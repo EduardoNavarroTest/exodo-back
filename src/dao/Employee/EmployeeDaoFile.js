@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 
 const path = './src/data/employees.json';
 
-class employeeDaoFile {
+class EmployeeDaoFile {
     async save(employee) {
         try {
             const employees = await this.findAll();
@@ -27,25 +27,24 @@ class employeeDaoFile {
         }
     }
 
-
-    async findByCode(code) {
+    async findById(id) {
         try {
             const employees = await this.findAll();
-            const employee = employees.find(employee => employee.code === code);
+            const employee = employees.find(employee => employee.id === id);
             return employee;
         } catch (err) {
-            console.log('Error finding employee by code:', err);
+            console.log('Error finding employee by id:', err);
             throw err;
 
         }
     }
 
-    async deleteByCode(code) {
+    async deleteById(id) {
         try {
             const employees = await this.findAll();
-            const employee = await this.findByCode(code);
+            const employee = await this.findById(id);
 
-            const index = employees.findIndex(employee => employee.code === code);
+            const index = employees.findIndex(employee => employee.id === id);
             if (index !== -1) {
                 employees.splice(index, 1);
                 await fs.writeFile(path, JSON.stringify(employees, null, 2));
@@ -53,25 +52,48 @@ class employeeDaoFile {
             }
 
         } catch (err) {
-            console.log('Error deleting employee by code:', err.message);
+            console.log('Error deleting employee by id:', err.message);
             throw new Error(err);
         }
     }
 
-    async updateByCode(code, newCode, newName, newDescription, newStatus) {
+    async updateById(employee) {
+        const { id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newBirthDate, newGenderId, newDescription, newStatus } = employee;
         try {
             const employees = await this.findAll();
-            const index = employees.findIndex(employee => employee.code === code);
+            const index = employees.findIndex(employee => employee.id === id);
             if (index !== -1) {
-                employees[index] = { id: employees[index].id, code: newCode, name: newName, description: newDescription, status: newStatus, user: employees[index].user, date: employees[index].date, userUpdate: employees[index].userUpdate, dateUpdate: new Date() };
+                employees[index] = { id: employees[index].id, typeId: newTypeId, codeId: newCodeId, firstname: newFirstName, middleName: newMiddleName, lastName: newLastName, secondLastName: newSecondLastName, address: newAddress, phone: newPhone, email: newEmail, mobile: newMobile, birthDate: newBirthDate, genderId: newGenderId, description: newDescription, status: newStatus, user: employees[index].user, date: employees[index].date, userUpdate: employees[index].userUpdate, dateUpdate: new Date() };
                 await fs.writeFile(path, JSON.stringify(employees, null, 2));
                 return employees[index];
             }
             return null;
         } catch (err) {
-            console.log('Error updating employee by code:', err.message);
+            console.log('Error updating employee by id:', err.message);
             throw new Error(err);
         }
+    }
+
+    async findByCodeId(codeId) {
+        try {
+            const employees = await this.findAll();
+            const employee = employees.find(employee => employee.codeId === codeId);
+            return employee;
+        } catch (err) {
+            console.log('Error finding employee by identification code:', err);
+            throw err;
+        }
+    }
+
+    async findByQuery(query) {
+        // try {
+        //     const employees = await this.findAll();
+        //     const filteredEmployees = employees.filter(employee => employee.name.toLowerCase().includes(query.toLowerCase()));
+        //     return filteredEmployees;
+        // } catch (err) {
+        //     console.log('Error finding employees by query:', err);
+        //     throw err;
+        // }
     }
 
 
@@ -87,4 +109,4 @@ class employeeDaoFile {
     }
 }
 
-export default employeeDaoFile;
+export default EmployeeDaoFile;

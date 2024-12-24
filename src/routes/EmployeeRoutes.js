@@ -1,14 +1,15 @@
 import express from 'express';
-import SizeController from '../controllers/EmployeeController.js';
+import EmployeeController from '../controllers/EmployeeController.js';
 
 const router = express.Router();
-const sizeController = new SizeController();
+const employeeController = new EmployeeController();
 
-router.get('/', sizeController.getAllSizes); //Traer todos
-router.get('/code/:code', sizeController.getSizeByCode); //Traer por id
-router.post('/', sizeController.createSize); //Crear
-router.put('/code/:code', sizeController.updateSizeByCode); //Actualizar
-router.delete('/code/:code', sizeController.deleteSizeByCode); //Eliminar por id
+router.get('/', employeeController.getAllEmployees); 
+router.get('/id/:id', employeeController.getEmployeeById); 
+router.get('/query/:query', employeeController.getEmployeeByQuery);
+router.post('/', employeeController.createEmployee); 
+router.put('/id/:id', employeeController.updateEmployeeById); 
+router.delete('/id/:id', employeeController.deleteEmployeeById); 
 
 
 

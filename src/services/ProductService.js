@@ -1,4 +1,4 @@
-import ProductRepository from '../repository/ProudtRepository.js';
+import ProductRepository from '../repository/ProductRepository.js';
 import ProductModel from '../models/ProductModel.js';
 import ProductDTO from '../dto/ProductDTO.js';
 import SubcategoryRepository from '../repository/SubcategoryRepository.js';
@@ -68,7 +68,7 @@ class ProductService {
         return ProductDTO.fromModel(deletedProduct);
     }
 
-    async updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
+    async updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
 
         const product = await this.productRepository.findById(id);
         if (!product) {
@@ -77,7 +77,7 @@ class ProductService {
 
         //Validaciones de las llaves foraneas.
         await this.validateCategory(newCategoryId);
-        await this.validateSubcategory(newSubCategoryId);
+        await this.validateSubcategory(newSubcategoryId);
         await this.validateSize(newSizeId);
         await this.validateColor(newColorId);
 
@@ -86,7 +86,7 @@ class ProductService {
             throw new Error('Barcode already exists');
         }
 
-        const updatedProduct = await this.productRepository.updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
+        const updatedProduct = await this.productRepository.updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
         return ProductDTO.fromModel(updatedProduct);
     }
 

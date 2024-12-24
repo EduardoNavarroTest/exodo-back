@@ -25,8 +25,12 @@ class ProductRepository {
     return await this.dao.deleteById(id);
   }
 
-  async updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
-    return await this.dao.updateById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
+  async findByQuery(query) {
+    return await this.dao.findByQuery(query);
+  }
+
+  async updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus) {
+    return await this.dao.updateById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
   }
 }
 

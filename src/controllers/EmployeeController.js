@@ -1,59 +1,95 @@
-import SizeService from '../services/SizeService.js';
+import EmployeeService from '../services/EmployeeService.js';
 
-const sizeService = new SizeService();
+const employeeService = new EmployeeService();
 
-class SizeController {
-    async createSize(req, res) {
-        const { code, name, description, status } = req.body;
+class EmployeeController {
+    async createEmployee(req, res) {
+        const { typeId, codeId, firstName, middleName, lastName, secondLastName, address, phone, email, mobile, genderId, birthDate, image, description, status } = req.body;
         try {
-            const size = await sizeService.createSize(code, name, description, status);
-            res.status(201).json(size);
+            const employee = await employeeService.createEmployee(typeId, codeId, firstName, middleName, lastName, secondLastName, address, phone, email, mobile, genderId, birthDate, image, description, status);
+            res.status(201).json(employee);
         } catch (error) {
             console.log(`Error service: ${error}`);
             res.status(500).json({ error: error.message });
         }
     }
 
-    async getAllSizes(req, res) {
+    async getAllEmployees(req, res) {
         try {
-            const sizes = await sizeService.getAllSizes();
-            res.status(200).json(sizes);
+            const employees = await employeeService.getAllEmployees();
+            res.status(200).json(employees);
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
     }
 
-    async getSizeByCode(req, res) {
-        const { code } = req.params;
+    async getEmployeeById(req, res) {
+        const { id } = req.params;
         try {
-            const size = await sizeService.getSizeByCode(code);
-            res.status(200).json(size);
+            const employee = await employeeService.getEmployeeById(id);
+            res.status(200).json(employee);
         } catch (error) {
             console.log(error);
             res.status(500).json({ error: error.message });
         }
     }
 
-    async deleteSizeByCode(req, res) {
-        const { code } = req.params;
+    async getEmployeeByQuery(req, res) {
+        const { query } = req.params;
         try {
-            const deletedSize = await sizeService.deleteSizeByCode(code);
-            res.status(200).json(deletedSize);
+            const employee = await employeeService.getEmployeeByQuery(query);
+            res.status(200).json(employee);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ error: error.message });
+        }
+    }
+
+    async deleteEmployeeById(req, res) {
+        const { id } = req.params;
+        try {
+            const deletedEmployee = await employeeService.deleteEmployeeById(id);
+            res.status(200).json(deletedEmployee);
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
     }
 
-    async updateSizeByCode(req, res) {
-        const { code } = req.params;
-        const { codeNew, nameNew, descriptionNew, statusNew } = req.body; 
+    async updateEmployeeById(req, res) {
+        const { id } = req.params;
+        const { newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newGenderId, newBirthDate, newImage, newDescription, newStatus } = req.body;
         try {
-            const updatedSize = await sizeService.updateSizeByCode(code, codeNew, nameNew, descriptionNew, statusNew);
-            res.status(200).json(updatedSize);
+            const updatedEmployee = await employeeService.updateEmployeeById(id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newGenderId, newBirthDate, newImage, newDescription, newStatus);
+            res.status(200).json(updatedEmployee);
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
     }
 }
 
-export default SizeController;
+export default EmployeeController;
+
+
+
+/**
+ * 
+ * 
+ * async searchEmployees(criteria) {
+    try {
+        // Construcción dinámica de la consulta basada en los criterios proporcionados
+        const query = {};
+        if (criteria.id) query.id = criteria.id;
+        if (criteria.codeId) query.codeId = criteria.codeId;
+        if (criteria.firstName) query.firstName = new RegExp(criteria.firstName, "i"); // Búsqueda insensible a mayúsculas
+        if (criteria.lastName) query.lastName = new RegExp(criteria.lastName, "i");
+
+        const employees = await EmployeeModel.find(query); // Realizamos la consulta
+        return employees;
+    } catch (error) {
+        throw new Error("Error al buscar empleados: " + error.message);
+    }
+}
+
+
+
+ */

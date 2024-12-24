@@ -56,9 +56,9 @@ class ProductController {
 
     async updateProductById(req, res) {
         const { id } = req.params;
-        const { newBarcode,  newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus } = req.body;
+        const { newBarcode,  newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus } = req.body;
         try {
-            const updatedProduct = await productService.updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubCategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
+            const updatedProduct = await productService.updateProductById(id, newBarcode, newName, newDescription, newCategoryId, newSubcategoryId, newSizeId, newColorId, newPrice, newStock, newIva, newImage, newStatus);
             res.status(200).json(updatedProduct);
         } catch (error) {
             res.status(500).json({ error: error.message });
