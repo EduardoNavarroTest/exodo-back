@@ -17,10 +17,10 @@ class EmployeeService {
         await this.validateTypeId(typeId);
         await this.validateGender(genderId);
 
-        /**REEMPLAZAR POR EL BARCODE */
-        const existingEmployee = await this.employeeRepository.findByQuery(codeId);
+        const existingEmployee = await this.employeeRepository.findByCode(codeId);
+        console.log(existingEmployee);
         if (existingEmployee) {
-            throw new Error('Employee already exists with the same barcode');
+            throw new Error('Employee already exists with the same code');
         }
 
         const employee = await new EmployeeModel({ typeId, codeId, firstName, middleName, lastName, secondLastName, address, phone, email, mobile, genderId, birthDate, image, description, status });
@@ -38,6 +38,14 @@ class EmployeeService {
 
     async getEmployeeById(id) {
         const employee = await this.employeeRepository.findById(id);
+        if (!employee) {
+            throw new Error('Employee not found');
+        }
+        return EmployeeDTO.fromModel(employee);
+    }
+
+    async getEmployeeByCode(code) {
+        const employee = await this.employeeRepository.findByCode(code);
         if (!employee) {
             throw new Error('Employee not found');
         }
@@ -70,15 +78,15 @@ class EmployeeService {
         }
 
         //Validaciones de las llaves foraneas.
-        await this.validateTypeId(typeId);
-        await this.validateGender(genderId);
+        await this.validateTypeId(newTypeId);
+        await this.validateGender(newGenderId);
 
-        const existingEmployee = await this.employeeRepository.findByQuery(query);
-        if (existingEmployee && newCodeId && newCodeId !== employee.codeId) { /** Entra aquí si existe el employeeo, si el barcode trae información y no es el mismo */
+        const existingEmployee = await this.employeeRepository.findByCode(newCodeId);
+        if (existingEmployee && newCodeId && newCodeId !== employee.codeId) {
             throw new Error('Identification code already exists');
         }
 
-        const updatedEmployee = await this.employeeRepository.updateEmployeeById({id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newGenderId, newBirthDate, newImage, newDescription, newStatus});
+        const updatedEmployee = await this.employeeRepository.updateEmployeeById({ id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newGenderId, newBirthDate, newImage, newDescription, newStatus });
         return EmployeeDTO.fromModel(updatedEmployee);
     }
 

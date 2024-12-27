@@ -17,6 +17,10 @@ class EmployeeRepository {
     return await this.dao.findById(id);
   }
 
+  async findByCode(code) {
+    return await this.dao.findByCode(code);
+  }
+
   async findByQuery(query) {
     return await this.dao.findByQuery(query);
   }
@@ -25,7 +29,7 @@ class EmployeeRepository {
     return await this.dao.deleteById(id);
   }
 
-  async updateEmployeeById(id) {
+  async updateEmployeeById(employee) {
     return await this.dao.updateById(employee);
   }
 }

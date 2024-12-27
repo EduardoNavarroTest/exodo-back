@@ -30,12 +30,11 @@ class EmployeeDaoFile {
     async findById(id) {
         try {
             const employees = await this.findAll();
-            const employee = employees.find(employee => employee.id === id);
+            const employee = employees.find(employee => employee.id == id);
             return employee;
         } catch (err) {
-            console.log('Error finding employee by id:', err);
+            console.log('Error finding employee by identification code:', err);
             throw err;
-
         }
     }
 
@@ -44,7 +43,7 @@ class EmployeeDaoFile {
             const employees = await this.findAll();
             const employee = await this.findById(id);
 
-            const index = employees.findIndex(employee => employee.id === id);
+            const index = employees.findIndex(employee => employee.id == id);
             if (index !== -1) {
                 employees.splice(index, 1);
                 await fs.writeFile(path, JSON.stringify(employees, null, 2));
@@ -58,12 +57,12 @@ class EmployeeDaoFile {
     }
 
     async updateById(employee) {
-        const { id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newBirthDate, newGenderId, newDescription, newStatus } = employee;
+        const { id, newTypeId, newCodeId, newFirstName, newMiddleName, newLastName, newSecondLastName, newAddress, newPhone, newEmail, newMobile, newBirthDate, newImage, newGenderId, newDescription, newStatus } = employee;
         try {
             const employees = await this.findAll();
-            const index = employees.findIndex(employee => employee.id === id);
+            const index = employees.findIndex(employee => employee.id == id);
             if (index !== -1) {
-                employees[index] = { id: employees[index].id, typeId: newTypeId, codeId: newCodeId, firstname: newFirstName, middleName: newMiddleName, lastName: newLastName, secondLastName: newSecondLastName, address: newAddress, phone: newPhone, email: newEmail, mobile: newMobile, birthDate: newBirthDate, genderId: newGenderId, description: newDescription, status: newStatus, user: employees[index].user, date: employees[index].date, userUpdate: employees[index].userUpdate, dateUpdate: new Date() };
+                employees[index] = { id: employees[index].id, typeId: newTypeId, codeId: newCodeId, firstName: newFirstName, middleName: newMiddleName, lastName: newLastName, secondLastName: newSecondLastName, address: newAddress, phone: newPhone, email: newEmail, mobile: newMobile, genderId: newGenderId, birthDate: newBirthDate, image: newImage, description: newDescription, status: newStatus, user: employees[index].user, date: employees[index].date, userUpdate: employees[index].userUpdate, dateUpdate: new Date() };
                 await fs.writeFile(path, JSON.stringify(employees, null, 2));
                 return employees[index];
             }
@@ -74,10 +73,10 @@ class EmployeeDaoFile {
         }
     }
 
-    async findByCodeId(codeId) {
+    async findByCode(code) {
         try {
             const employees = await this.findAll();
-            const employee = employees.find(employee => employee.codeId === codeId);
+            const employee = employees.find(employee => employee.codeId == code);
             return employee;
         } catch (err) {
             console.log('Error finding employee by identification code:', err);

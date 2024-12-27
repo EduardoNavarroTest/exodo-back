@@ -45,6 +45,18 @@ class EmployeeController {
         }
     }
 
+    async getEmployeeByCode(req, res) {
+        const { code } = req.params;
+        try {
+            const employee = await employeeService.getEmployeeByCode(code);
+            res.status(200).json(employee);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ error: error.message });
+        }
+    }
+
+
     async deleteEmployeeById(req, res) {
         const { id } = req.params;
         try {
