@@ -8,6 +8,7 @@ import GenderRoutes from "./routes/GenderRoutes.js"
 import IdTypesRoutes from "./routes/IdTypesRoutes.js"
 import MaritalStatusRoutes from "./routes/MaritalStatusRoutes.js"
 import EmployeeRoutes from "./routes/EmployeeRoutes.js"
+import UserRoutes from "./routes/UserRouter.js"
 import cors from 'cors';
 import 'dotenv/config'
 
@@ -31,6 +32,7 @@ app.use("/api/genders", GenderRoutes);
 app.use("/api/id-types", IdTypesRoutes);
 app.use("/api/marital-status", MaritalStatusRoutes);
 app.use("/api/employees", EmployeeRoutes);
+app.use("/api/users", UserRoutes);
 
 
 

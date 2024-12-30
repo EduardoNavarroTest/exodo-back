@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "1234",
+    "description": "Administrator",
+    "employeeId": 1,
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 2,
+    "username": "user",
+    "password": "1234",
+    "description": "User",
+    "employeeId": 2,
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 3,
+    "username": "guest",
+    "password": "1234",
+    "description": "Guest",
+    "employeeId": 3,
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  },
+  {
+    "id": 4,
+    "username": "client",
+    "password": "1234",
+    "description": "Client",
+    "employeeId": 4,
+    "status": true,
+    "user": "admin",
+    "date": "2022-02-02",
+    "userUpdate": "admin",
+    "dateUpdate": "2022-02-02"
+  }
+]

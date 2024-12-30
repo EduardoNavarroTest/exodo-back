@@ -18,7 +18,6 @@ class EmployeeService {
         await this.validateGender(genderId);
 
         const existingEmployee = await this.employeeRepository.findByCode(codeId);
-        console.log(existingEmployee);
         if (existingEmployee) {
             throw new Error('Employee already exists with the same code');
         }
@@ -91,7 +90,6 @@ class EmployeeService {
     }
 
     async validateTypeId(typeId) {
-        console.log(typeId);
         const type = await this.idTypesRepository.findById(typeId);
         if (!type || !type.status) {
             throw new Error('Identification Type not valid or disabled');
