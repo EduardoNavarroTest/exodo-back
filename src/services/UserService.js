@@ -2,6 +2,7 @@ import UserRepository from '../repository/UserRepository.js';
 import UserModel from '../models/UserModel.js';
 import UserDTO from '../dto/UserDTO.js';
 import EmployeeRepository from '../repository/EmployeeRepository.js';
+import { createHash } from '../utils/bcrypt.js';
 
 class UserService {
     constructor() {
@@ -13,12 +14,14 @@ class UserService {
         //Validaciones de las llaves foraneas.
         await this.validateEmployeeId(employeeId);
 
+        const passHash = createHash(password);
+
         const existingUser = await this.userRepository.findByUser(username);
         if (existingUser) {
             throw new Error('Username already exists with the same code');
         }
 
-        const user = await new UserModel({ username, password, description, employeeId, status });
+        const user = await new UserModel({ username, password: passHash, description, employeeId, status });
         const savedUser = await this.userRepository.save(user);
         return await UserDTO.fromModel(savedUser);
     }
@@ -42,7 +45,7 @@ class UserService {
     async getUserByUser(username) {
         const user = await this.userRepository.findByUser(username);
         if (!user) {
-            throw new Error('User not found');
+            return null;
         }
         return UserDTO.fromModel(user);
     }

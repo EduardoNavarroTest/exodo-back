@@ -2,11 +2,11 @@
   {
     "id": 1,
     "username": "admin",
-    "password": "1234",
+    "password": "$2b$10$sNErQusWcLE12sgG5tw5.eCZ7aASmI9spj.Nb/uU3S7PXd7K3YZDy",
     "description": "Administrator",
     "employeeId": 1,
     "status": true,
-    "user": "admin",
+    "user": "sd1f1",
     "date": "2022-02-02",
     "userUpdate": "admin",
     "dateUpdate": "2022-02-02"
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "username": "user",
-    "password": "1234",
+    "password": "$2b$10$sNErQusWcLE12sgG5tw5.eCZ7aASmI9spj.Nb/uU3S7PXd7K3YZDy",
     "description": "User",
     "employeeId": 2,
     "status": true,
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "username": "guest",
-    "password": "1234",
+    "password": "$2b$10$sNErQusWcLE12sgG5tw5.eCZ7aASmI9spj.Nb/uU3S7PXd7K3YZDy",
     "description": "Guest",
     "employeeId": 3,
     "status": true,
@@ -38,13 +38,37 @@
   {
     "id": 4,
     "username": "client",
-    "password": "1234",
-    "description": "Client",
-    "employeeId": 4,
+    "password": "$2b$10$gokip/STXTXKC/51OKUcbOUkvGODHB1qZgnP90knr96BRhDZX7tS2",
+    "description": "",
+    "employeeId": 1,
     "status": true,
     "user": "admin",
     "date": "2022-02-02",
     "userUpdate": "admin",
-    "dateUpdate": "2022-02-02"
+    "dateUpdate": "2025-01-07T21:22:35.555Z"
+  },
+  {
+    "id": 5,
+    "username": "test",
+    "password": "$2b$10$gokip/STXTXKC/51OKUcbOUkvGODHB1qZgnP90knr96BRhDZX7tS2",
+    "description": "Client",
+    "employeeId": 4,
+    "status": false,
+    "user": "",
+    "date": "2025-01-07T21:22:21.624Z",
+    "userUpdate": "",
+    "dateUpdate": "2025-01-07T21:22:21.624Z"
+  },
+  {
+    "id": 6,
+    "username": "dev",
+    "password": "$2b$10$X.ZPZ90WzK20mrLLGUO5EeQ/uuPo5wzA/sbxe5RIzcdPpooeYUx86",
+    "description": "Client",
+    "employeeId": 1,
+    "status": false,
+    "user": "",
+    "date": "2025-01-08T18:33:03.552Z",
+    "userUpdate": "",
+    "dateUpdate": "2025-01-08T18:33:03.552Z"
   }
 ]

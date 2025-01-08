@@ -49,6 +49,9 @@ class UserController {
         const { user } = req.params;
         try {
             const username = await userService.getUserByUser(user);
+            if (!username) {
+                throw new Error('User not found');
+            }
             res.status(200).json(username);
         } catch (error) {
             console.log(error);
