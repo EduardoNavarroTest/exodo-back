@@ -22,7 +22,7 @@ class SessionController {
                 expiresIn: process.env.JWT_EXPIRES_IN   
             });
 
-            return res.cookie(process.env.COOKIE_NAME, token, { httpOnly: true }).status(200).json({ message: "Login successful", token });
+            return res.cookie(process.env.COOKIE_NAME, token, { httpOnly: false, }).status(200).json({ message: "Login successful", token });
             
         } catch (error) {
             console.log("Error: ", error);

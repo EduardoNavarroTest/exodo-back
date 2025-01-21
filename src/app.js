@@ -25,9 +25,14 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
-initializePassport();
+// Configurar CORS correctamente
+app.use(cors({
+    origin: 'http://localhost:5173', // Especifica tu origen
+    credentials: true // Permite enviar cookies y credenciales
+}));
 app.use(passport.initialize());
+initializePassport();
+
 
 
 //Routes
@@ -43,7 +48,15 @@ app.use("/api/employees", EmployeeRoutes);
 app.use("/api/users", UserRoutes);
 app.use("/api/session", SessionRoutes);
 
+app.get("/test-cookie", (req, res) => {
+    res.cookie("testCookie", "testValue");
+    res.send("Cookie set");
+});
 
+app.get("/check-cookie", (req, res) => {
+    const cookie = req.cookies["testCookie"];
+    res.send(`Cookie value: ${cookie}`);
+});
 
 
 app.listen(PORT, () => {
@@ -64,7 +77,7 @@ app.listen(PORT, () => {
  * En React, aplicar la lógica de login	
  * En react, aplicar la lógica de logout
  * En React, aplicar la lógica de proteger rutas
- * 
+ * Ver si es necesario aplicar lo de cors
  * 
  * 
  * SEGUNDA FASE

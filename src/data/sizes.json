@@ -59,10 +59,10 @@
     "code": "XL",
     "name": "Extra Large",
     "description": "Extra Large - Talla muy grande, ideal para personas de complexión grande.",
-    "status": false,
+    "status": true,
     "user": "admin",
     "date": "2022-02-02",
     "userUpdate": "admin",
-    "dateUpdate": "2024-11-06T15:11:04.402Z"
+    "dateUpdate": "2025-01-08T22:20:50.431Z"
   }
 ]
